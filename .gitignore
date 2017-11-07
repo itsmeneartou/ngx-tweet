@@ -4,6 +4,7 @@ aot
 /lib-temp
 node_modules
 npm-debug.log
+.idea
 
 # OS generated files
 Thumbs.db

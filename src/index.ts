@@ -3,4 +3,4 @@
  */
 export * from './components/index';
 export * from './services/index';
-export * from "./ng2-tweet.module";
+export * from "./ngx-tweet.module";
