@@ -15,7 +15,7 @@ ngx-tweet is sourced from arusahni's ngTweet app (https://github.com/arusahni/ng
 Import `TweetModule` in your module:
 
 ```javascript
-import { TweetModule } from 'ngx-tweet';
+import { TweetModule } from "ngx-tweet/lib/ngx-tweet.module";
 
 [...]
 imports: [
