@@ -1,13 +1,12 @@
 {
   "name": "ngx-tweet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular component for displaying a Twitter Tweet",
   "author": "Raphaël MARQUES <work.rmarques@gmail.com> (https://raphaelmarques.fr)",
   "homepage": "https://github.com/Adrael/ngx-tweet#readme",
-  "license": "MIT",  
+  "license": "MIT",
   "main": "./src/index.ts",
-  "scripts": 
-  {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint \"src/**/*.ts\"",
     "pree2e": "webdriver-manager update",
@@ -18,10 +17,10 @@
     "clean:aot": "rimraf aot/*",
     "clean:lib": "rimraf lib/*",
     "clean:lib-temp": "rimraf lib-temp/*",
-    "clean":"npm run clean:aot && npm run clean:lib && npm run clean:lib-temp",
+    "clean": "npm run clean:aot && npm run clean:lib && npm run clean:lib-temp",
     "copy:assets": "cpx \"src/assets/**/*\" lib/assets",
     "copy:src": "cpx \"lib-temp/src/**/*\" lib",
-    "copy":"npm run copy:assets && npm run copy:src",
+    "copy": "npm run copy:assets && npm run copy:src",
     "ngc": "node_modules/.bin/ngc -p tsconfig-aot.json",
     "b": "npm run clean && npm run ngc && npm run copy && npm run clean:lib-temp"
   },
@@ -38,9 +37,7 @@
     "url": "https://github.com/Adrael/ngx-tweet/issues"
   },
   "typings": "./lib/index.d.ts",
-  "dependencies": 
-  {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
@@ -73,5 +70,5 @@
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "typescript": "^2.6.1"
-  }  
+  }
 }
