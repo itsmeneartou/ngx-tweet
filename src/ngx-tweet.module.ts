@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { ModuleWithProviders, NgModule } from "@angular/core";
-import { TweetComponent, TweetService } from "./index";
+import { TweetComponent } from "./components/ngx-tweet";
+import { TweetService } from "./services";
 
 @NgModule({
     imports: [

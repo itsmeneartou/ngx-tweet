@@ -12,10 +12,10 @@ ngx-tweet is sourced from arusahni's ngTweet app (https://github.com/arusahni/ng
 
 ## Usage
 
-Import in `app.module.ts`
+Import `TweetModule` in your module:
 
 ```javascript
-import { TweetModule } from 'ngx-tweet/lib/index';
+import { TweetModule } from 'ngx-tweet';
 
 [...]
 imports: [
@@ -24,24 +24,14 @@ imports: [
 [...]
 ```
 
-Add to your desired component, in this case `home.component.ts` (Don't forget to add it to your constructor)
+Finally, use `ngxc-tweet` component in your template:
 
 ```javascript
-import { TweetService } from 'ngx-tweet/lib/index';
-
-constructor(private _tweetService: TweetService) {
-
-}
-```
-
-Finally, place in your template, in this case `home.component.html`
-
-```javascript
-<ngx-tweet tweetId="824004497055907844"></ng2-tweet>
+<ngxc-tweet tweetId="824004497055907844"></ng2-tweet>
 ```
 
 The `tweetId` is the number at the end of the tweet url that you want to embed, for example,
 
-https://twitter.com/tommygaessler/status/824004497055907844
+`https://twitter.com/tommygaessler/status/824004497055907844`
 
 And voila! Happy Tweeting!

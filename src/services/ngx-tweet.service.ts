@@ -11,7 +11,7 @@ export class TweetService {
     constructor() {}
 
     public loadScript(): Observable<any> {
-        return Observable.create((observer: Observer<string>) => {
+        return Observable.create((observer: Observer<any>) => {
             this._startScriptLoad();
             window[ this.TWITTER_OBJECT ].ready(this._onTwitterScriptLoadedFactory(observer));
         });
@@ -53,9 +53,9 @@ export class TweetService {
         firstJSScript.parentNode.insertBefore(js, firstJSScript);
     }
 
-    private _onTwitterScriptLoadedFactory(observer: Observer<string>): Function {
-        return (twitterScript: string) => {
-            observer.next(twitterScript);
+    private _onTwitterScriptLoadedFactory(observer: Observer<any>): Function {
+        return (twitterData: any) => {
+            observer.next(twitterData);
             observer.complete();
         };
     }

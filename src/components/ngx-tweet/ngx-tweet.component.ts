@@ -16,8 +16,8 @@ export class TweetComponent implements AfterViewInit {
     public ngAfterViewInit(): void {
         this.tweetService
             .loadScript()
-            .subscribe((twitterScript: string) => {
-                window[ "twttr" ].widgets.createTweet(this.tweetId, this.element.nativeElement, {});
+            .subscribe((twitterData: any) => {
+                twitterData.widgets.createTweet(this.tweetId, this.element.nativeElement, {});
             });
     }
 }
