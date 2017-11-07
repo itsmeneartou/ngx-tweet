@@ -1,6 +1,7 @@
 # Node generated files
 node_modules
 npm-debug.log
+.idea
 
 
 # OS generated files
@@ -16,4 +17,7 @@ Thumbs.db
 .npmignore
 license-banner.txt
 tsconfig.json
+tsconfig-aot.json
 tsconfig.publish.json
+yarn.lock
+tslint.json
