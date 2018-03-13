@@ -1,4 +1,4 @@
-# ngx-tweet
+# ngx-tweet [![npm version](https://badge.fury.io/js/ngx-tweet.svg)](https://badge.fury.io/js/ngx-tweet) [![npm downloads](https://img.shields.io/npm/dm/ngx-tweet.svg)](https://npmjs.org/ngx-tweet)
 
 [![NPM](https://nodei.co/npm/ngx-tweet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngx-tweet/)
 [![NPM](https://nodei.co/npm-dl/ngx-tweet.png)](https://nodei.co/npm/ngx-tweet/)
@@ -38,3 +38,7 @@ The `tweetId` is the number at the end of the tweet url that you want to embed, 
 `https://twitter.com/tommygaessler/status/824004497055907844`
 
 And voila! Happy Tweeting!
+
+## License
+
+The MIT License (see the [LICENSE](https://github.com/Adrael/ngx-tweet/blob/master/LICENSE) file for the full text)
