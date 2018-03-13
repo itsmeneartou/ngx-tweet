@@ -1,5 +1,8 @@
 # ngx-tweet
 
+[![NPM](https://nodei.co/npm/ngx-tweet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngx-tweet/)
+[![NPM](https://nodei.co/npm-dl/ngx-tweet.png)](https://nodei.co/npm/ngx-tweet/)
+
 ## Angular Tweet Component
 
 Easily embed Twitter widgets into your Angular application! No more having to kludge together a Twitter script loader, or manage embed state on visibility change.
@@ -8,7 +11,7 @@ ngx-tweet is sourced from arusahni's ngTweet app (https://github.com/arusahni/ng
 
 ## Installation
 
-`npm install ngx-tweet --save`
+`npm install ngx-tweet --save` or `yarn add ngx-tweet`
 
 ## Usage
 
@@ -27,7 +30,7 @@ imports: [
 Finally, use `ngxc-tweet` component in your template:
 
 ```javascript
-<ngxc-tweet tweetId="824004497055907844"></ng2-tweet>
+<ngxc-tweet tweetId="824004497055907844"></ngxc-tweet>
 ```
 
 The `tweetId` is the number at the end of the tweet url that you want to embed, for example,
