@@ -15,7 +15,7 @@ ngx-tweet is sourced from arusahni's ngTweet app (https://github.com/arusahni/ng
 
 ## Usage
 
-Import `TweetModule` in your module:
+Import `NgxTweetModule` in your module:
 
 ```javascript
 import { NgxTweetModule } from "ngx-tweet";
@@ -32,12 +32,12 @@ imports: [
 Finally, use `ngx-tweet` component in your template:
 
 ```javascript
-<ngx-tweet tweetId="824004497055907844"></ngx-tweet>
+<ngx-tweet tweetId="921670221710032896"></ngx-tweet>
 ```
 
 The `tweetId` is the number at the end of the tweet url that you want to embed, for example,
 
-`https://twitter.com/tommygaessler/status/824004497055907844`
+`https://twitter.com/nixcraft/status/921670221710032896`
 
 And voila! Happy Tweeting!
 
