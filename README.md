@@ -18,19 +18,21 @@ ngx-tweet is sourced from arusahni's ngTweet app (https://github.com/arusahni/ng
 Import `TweetModule` in your module:
 
 ```javascript
-import { TweetModule } from "ngx-tweet/lib/ngx-tweet.module";
+import { NgxTweetModule } from "ngx-tweet";
 
+@NgModule({
 [...]
 imports: [
-  TweetModule
+  NgxTweetModule
 ]
 [...]
+})
 ```
 
-Finally, use `ngxc-tweet` component in your template:
+Finally, use `ngx-tweet` component in your template:
 
 ```javascript
-<ngxc-tweet tweetId="824004497055907844"></ngxc-tweet>
+<ngx-tweet tweetId="824004497055907844"></ngx-tweet>
 ```
 
 The `tweetId` is the number at the end of the tweet url that you want to embed, for example,
@@ -38,6 +40,18 @@ The `tweetId` is the number at the end of the tweet url that you want to embed, 
 `https://twitter.com/tommygaessler/status/824004497055907844`
 
 And voila! Happy Tweeting!
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## License
 

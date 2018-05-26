@@ -1,21 +1,21 @@
-import { Injectable } from "@angular/core";
-import { Observer } from "rxjs/Observer";
-import { Observable } from "rxjs/Rx";
+import { Injectable } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
 
-@Injectable()
-export class TweetService {
-    private readonly TWITTER_OBJECT = "twttr";
-    private readonly TWITTER_SCRIPT_ID = "twitter-wjs";
-    private readonly TWITTER_WIDGET_URL = "https://platform.twitter.com/widgets.js";
+@Injectable({
+    providedIn: 'root'
+})
+export class NgxTweetService {
 
-    constructor() {}
+    private readonly TWITTER_OBJECT = 'twttr';
+    private readonly TWITTER_SCRIPT_ID = 'twitter-wjs';
+    private readonly TWITTER_WIDGET_URL = 'https://platform.twitter.com/widgets.js';
 
     public loadScript(): Observable<any> {
         return Observable.create((observer: Observer<any>) => {
             this._startScriptLoad();
             window[ this.TWITTER_OBJECT ].ready(this._onTwitterScriptLoadedFactory(observer));
         });
-    };
+    }
 
     private _startScriptLoad() {
         const twitterData = window[ this.TWITTER_OBJECT ] || {};
@@ -38,16 +38,12 @@ export class TweetService {
 
     private _twitterScriptAlreadyExists(): boolean {
         const twitterScript = document.getElementById(this.TWITTER_SCRIPT_ID);
-        return !this._isNull(twitterScript);
-    }
-
-    private _isNull(value: any): boolean {
-        return value === null && typeof value === "object";
+        return (twitterScript !== null || typeof twitterScript !== 'object');
     }
 
     private _appendTwitterScriptToDOM(): void {
-        const firstJSScript = document.getElementsByTagName("script")[ 0 ];
-        const js = document.createElement("script");
+        const firstJSScript = document.getElementsByTagName('script')[ 0 ];
+        const js = document.createElement('script');
         js.id = this.TWITTER_SCRIPT_ID;
         js.src = this.TWITTER_WIDGET_URL;
         firstJSScript.parentNode.insertBefore(js, firstJSScript);
