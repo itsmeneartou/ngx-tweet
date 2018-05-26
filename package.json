@@ -1,6 +1,6 @@
 {
     "name": "ngx-tweet",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Angular component for displaying a Twitter Tweet",
     "author": "Raphaël MARQUES <work.rmarques@gmail.com> (https://raphaelmarques.fr)",
     "homepage": "https://github.com/Adrael/ngx-tweet#readme",
