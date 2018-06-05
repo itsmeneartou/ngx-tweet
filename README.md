@@ -1,6 +1,14 @@
-# ngx-tweet [![npm version](https://badge.fury.io/js/ngx-tweet.svg)](https://badge.fury.io/js/ngx-tweet) [![npm downloads](https://img.shields.io/npm/dm/ngx-tweet.svg)](https://npmjs.org/ngx-tweet)
+# ngx-tweet
 
-[![NPM](https://nodei.co/npm/ngx-tweet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngx-tweet/)
+[![npm version](https://badge.fury.io/js/ngx-tweet.svg)](https://badge.fury.io/js/ngx-tweet)
+[![npm downloads](https://img.shields.io/npm/dm/ngx-tweet.svg)](https://npmjs.org/ngx-tweet)
+[![GitHub issues](https://img.shields.io/github/issues/Adrael/ngx-tweet.svg)](https://github.com/Adrael/ngx-tweet/issues)
+[![Dependencies](https://david-dm.org/Adrael/ngx-tweet.svg)](https://david-dm.org/Adrael/ngx-tweet#info=dependencies)
+[![Dev Dependencies](https://david-dm.org/Adrael/ngx-tweet/dev-status.svg)](https://david-dm.org/Adrael/ngx-tweet#info=devDependencies)
+[![Peer Dependencies](https://david-dm.org/Adrael/ngx-tweet/peer-status.svg)](https://david-dm.org/Adrael/ngx-tweet#info=peerDependenciess)
+[![Known Vulnerabilities](https://snyk.io/test/github/Adrael/ngx-tweet/badge.svg)](https://snyk.io/test/github/Adrael/ngx-tweet)
+[![GitHub license](https://img.shields.io/github/license/Adrael/ngx-tweet.svg)](https://github.com/Adrael/ngx-tweet/blob/master/LICENSE)
+
 [![NPM](https://nodei.co/npm-dl/ngx-tweet.png)](https://nodei.co/npm/ngx-tweet/)
 
 ## Angular Tweet Component
