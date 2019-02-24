@@ -1,25 +1,46 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewEncapsulation } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    Input,
+    OnInit,
+    ViewEncapsulation
+} from '@angular/core';
 import { NgxTweetService } from '../services/ngx-tweet.service';
 
 @Component({
     selector: 'ngx-tweet',
-    template: '',
-    styles: ['.twitter-tweet { transform: none !important; }'],
-    encapsulation: ViewEncapsulation.None
+    template: '<ng-content *ngIf="isTwitterScriptLoading"></ng-content>',
+    styles: [ '.twitter-tweet { transform: none !important; }' ],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxTweetComponent implements AfterViewInit {
+export class NgxTweetComponent implements OnInit {
+    @Input() public tweetId: string;
 
-    @Input()
-    public tweetId: string;
+    public isTwitterScriptLoading: boolean = true;
 
-    constructor(private _elementRef: ElementRef, private _ngxTweetService: NgxTweetService) {
+    constructor(private readonly _elementRef: ElementRef,
+                private readonly _ngxTweetService: NgxTweetService,
+                private readonly _changeDetectorRef: ChangeDetectorRef) {
     }
 
-    public ngAfterViewInit(): void {
+    public ngOnInit(): void {
+        this._loadTwitterScript();
+    }
+
+    private _loadTwitterScript(): void {
         this._ngxTweetService
             .loadScript()
             .subscribe((twitterData: any) => {
+                this._updateTwitterScriptLoadingState();
                 twitterData.widgets.createTweet(this.tweetId, this._elementRef.nativeElement, {});
             });
+    }
+
+    private _updateTwitterScriptLoadingState(): void {
+        this.isTwitterScriptLoading = false;
+        this._changeDetectorRef.detectChanges();
     }
 }
