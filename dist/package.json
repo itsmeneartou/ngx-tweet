@@ -1,0 +1,68 @@
+{
+  "name": "ngx-tweet",
+  "version": "2.0.3",
+  "description": "Angular component for displaying a Twitter Tweet",
+  "author": "Raphaël MARQUES <work.rmarques@gmail.com> (https://raphaelmarques.fr)",
+  "homepage": "https://github.com/Adrael/ngx-tweet#readme",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrael/ngx-tweet.git"
+  },
+  "keywords": [
+    "Angular",
+    "Twitter",
+    "Tweet"
+  ],
+  "bugs": {
+    "url": "https://github.com/Adrael/ngx-tweet/issues"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.7.0-beta.1",
+    "@angular/animations": "6.0.3",
+    "@angular/cli": "6.0.7",
+    "@angular/common": "6.0.3",
+    "@angular/compiler": "6.0.3",
+    "@angular/compiler-cli": "6.0.3",
+    "@angular/core": "6.0.3",
+    "@angular/forms": "6.0.3",
+    "@angular/http": "6.0.3",
+    "@angular/language-service": "6.0.3",
+    "@angular/platform-browser": "6.0.3",
+    "@angular/platform-browser-dynamic": "6.0.3",
+    "@angular/router": "6.0.3",
+    "@types/jasmine": "2.8.8",
+    "@types/jasminewd2": "2.0.3",
+    "@types/node": "10.3.1",
+    "codelyzer": "4.3.0",
+    "core-js": "2.5.7",
+    "jasmine-core": "3.1.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "2.0.2",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage-istanbul-reporter": "2.0.1",
+    "karma-jasmine": "1.1.2",
+    "karma-jasmine-html-reporter": "1.1.0",
+    "ng-packagr": "3.0.1",
+    "protractor": "5.3.2",
+    "rxjs": "6.2.0",
+    "ts-node": "6.1.0",
+    "tslint": "5.10.0",
+    "typescript": "2.7.2",
+    "zone.js": "0.8.26"
+  },
+  "main": "bundles/ngx-tweet.umd.js",
+  "module": "fesm5/ngx-tweet.js",
+  "es2015": "fesm2015/ngx-tweet.js",
+  "esm5": "esm5/ngx-tweet.js",
+  "esm2015": "esm2015/ngx-tweet.js",
+  "fesm5": "fesm5/ngx-tweet.js",
+  "fesm2015": "fesm2015/ngx-tweet.js",
+  "typings": "ngx-tweet.d.ts",
+  "metadata": "ngx-tweet.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
