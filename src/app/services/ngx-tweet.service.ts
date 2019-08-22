@@ -20,6 +20,7 @@ export class NgxTweetService {
     }
 
     private _startScriptLoad(): void {
+        console.log('script loading started');
         const twitterData = this._document.defaultView[ this.TWITTER_OBJECT ] || {};
 
         if (this._twitterScriptAlreadyExists()) {

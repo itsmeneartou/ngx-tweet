@@ -5,7 +5,9 @@ import {
     ElementRef,
     Input,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
+    Output,
+    EventEmitter
 } from '@angular/core';
 import { NgxTweetService } from '../services/ngx-tweet.service';
 
@@ -17,8 +19,8 @@ import { NgxTweetService } from '../services/ngx-tweet.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxTweetComponent implements OnInit {
-    @Input() public tweetId: string;
-
+    @Input() public tweetId: string='1164396389075263489';
+    @Output() public onTweetLoaded:EventEmitter<boolean>=new EventEmitter();
     public isTwitterScriptLoading: boolean = true;
 
     constructor(private readonly _elementRef: ElementRef,
@@ -35,7 +37,9 @@ export class NgxTweetComponent implements OnInit {
             .loadScript()
             .subscribe((twitterData: any) => {
                 this._updateTwitterScriptLoadingState();
-                twitterData.widgets.createTweet(this.tweetId, this._elementRef.nativeElement, {});
+                twitterData.widgets.createTweet(this.tweetId, this._elementRef.nativeElement, {}).then(result=>{
+                    this.onTweetLoaded.emit(true);
+                });
             });
     }
 
